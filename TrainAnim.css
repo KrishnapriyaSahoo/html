@@ -1,0 +1,243 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 387px;
+}
+.trainAnimation{
+position: relative;
+}
+.content{
+width:400px;
+height:400px;
+border-radius: 50%;
+background-color: rgb(13, 13, 159);
+overflow: hidden;
+}
+.buildings{
+    position: relative;
+    background-color: rgb(12, 12, 107);
+    width: 80px;
+    height: 300px;
+    left: 0;
+    top:150px;
+    box-shadow: 80px 40px rgb(12, 12, 107),120px -30px rgb(12, 12, 107),150px 20px rgb(12, 12, 107),190px -10px rgba(12, 12, 107,0.5),
+    30px -10px rgba(12, 12, 107,0.5),220px 70px rgb(12, 12, 107),280px -25px rgba(12, 12, 107,o.5),270px 30px rgb(12, 12, 107),320px 70px rgb(12, 12, 107);
+}
+.buildings:before{
+content: "";
+position: absolute;
+width: 10px;
+height: 15px;
+background-color: rgb(255, 213, 17);
+left: 13px;
+top: 10px;
+box-shadow: 23px 0 rgba(255, 213, 17,0.7),47px 0px rgba(255, 213, 17,0.2),0px 30px rgba(255, 213, 17,0.2),23px 30px rgba(255, 213, 17,0.2),47px 30px rgba(255, 213, 17),120px -30px rgba(255, 213, 17,0.6),140px -30px rgba(255, 213, 17),160px -30px rgba(255, 213, 17,0.2),120px 0px rgba(255, 213, 17,0.2),140px 0px rgba(255, 213, 17,0.2),
+160px 0px rgba(255, 213, 17,0.2),270px 30px rgba(255, 213, 17,0.2),290px 30px rgba(255, 213, 17,0.2),310px 30px rgba(255, 213, 17,0.5);
+}
+.buildings:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(13, 13, 92);
+    width: 100px;
+    height: 250px;
+    top: 90px;
+    box-shadow: 100px 30px #041c2d,150px -10px #041c2d,230px 50px #041c2d,300px -20px #041c2d;
+}
+.windows{
+    position: absolute;
+    background-color: rgba(252,163,17);
+    width: 20px;
+    height: 25px;
+    left: 310px;
+    top: 230px;
+    box-shadow: 30px 0px rgba(252,163,17),60px 40px rgba(252,163,17,0.3),30px 40px rgba(252,163,17,0.3),60px 40px rgba(252,163,17),
+    -140px 20px rgba(252,163,17),-100px 20px rgba(252,163,17,0.3),-100px 60px rgba(252,163,17),-250px 30px rgba(252,163,17,0.8),
+    -250px 70px rgba(252,163,17,0.2),-250px 30px rgba(252,163,17,0.2);
+}
+.windows:before{
+    content:"";
+    position: absolute;
+    background-color: rgba(252,163,17,0.2);
+    width: 25px;
+    height: 7px;
+    left: -73px;
+    top:-53px;
+    box-shadow: 50px 15px rgba(252,163,17),120px 40px rgba(252,163,17,0.2),125px 55px rgba(252,163,17,0.3);
+}
+.windows:after{
+    content: "";
+    position: absolute;
+    background-color: rgba(252,163,17);
+    width: 15px;
+    height: 20px;
+    top: -50px;
+    left: -242px;
+}
+@keyframes flash{
+    from{opacity: 0.4;}
+    to{opacity:0.1;}
+}
+.bridge{
+    position: absolute;
+    z-index: 4;
+    width: 400px;
+    height: 5px;
+    top: 262px;
+    border-bottom: 5px #333;
+    border-top: 2px #333;
+}
+.bridge:after,.bridge:before{
+    content:"";
+    position: absolute;
+    background-color: #333;
+}
+.bridge:before{
+    width: 2px;
+    height:5px;
+    left: 60px;
+    box-shadow: 110px 0px #333,260px 0px #333,270px 0px #333 120px 0px #333;
+}
+.bridge:after{
+    width: 15px;
+    height: 120px;
+    left: 110px;
+    box-shadow: 150px 0px #333;
+}
+.train{
+    position: absolute;
+    z-index: 3;
+    animation: move 5s linear infinite;
+}
+@keyframes move{
+    from{left: -30px;}
+    to{
+        left: 80px;
+    }
+}
+.carOne{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    left: 220px;
+    top: -68px;
+    border-radius: 0 30px 0 0;
+    overflow: hidden;
+    box-shadow: inset 0 -5px brown;
+}
+.carOne:before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background-color: brown;
+    top: 5px;
+    left: 60px;
+}
+.carOne:after{
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 40px;
+    height: 7px;
+    left: 10px;
+    top: 10px;
+}
+.carTwo{
+    position: absolute;
+    width: 99px;
+    height: 30px;
+    background-color: red;
+    left: 120px;
+    top: -68px;
+    border-left-color: rgb(63,20,20);
+    overflow: hidden;
+    box-shadow: inset 0 -5px brown;
+}
+.carTwo:before{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 7px;
+    background-color: brown;
+    top: 10px;
+    left: 60px;
+}
+.carTwo:after{
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 40px;
+    height: 7px;
+    left: 10px;
+    top: 10px;
+}
+.carThree{
+    position: absolute;
+    width: 99px;
+    height: 30px;
+    background-color: red;
+    left: 20px;
+    top: -68px;
+    border-left-color: rgb(63, 20, 20);
+    overflow: hidden;
+    box-shadow: inset 0 -5px brown;
+}
+.carThree:before{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 7px;
+    background-color: brown;
+    top: 10px;
+    left: 60px;
+}
+.carThree:after{
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 40px;
+    height: 7px;
+    left: 10px;
+    top: 10px;
+}
+.moon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    box-shadow: 5px 5px rgb(234,226,143);
+    top:60px;
+    left: 205px;
+    border-radius: 50%;
+}
+.moon:before{
+    content: "";
+    position: absolute;
+   
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    left: 203px;
+}
+.moon:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    
+    top: -5px;
+    left: -235px;
+    width: 50px;
+    height: 50px;
+}
+.stars{
+    position: absolute;
+    background-color: #fff;
+    height: 2px;
+    border-radius: 50%;
+    width: 2px;
+    top: 70px;
+    left: 150px;
+    box-shadow: -70px 30px #fff,-40px -10px #fff,-20px -20px #fff,34px -10px #fff,
+    50px -30px #fff,-30px 23px #fff;
+}
